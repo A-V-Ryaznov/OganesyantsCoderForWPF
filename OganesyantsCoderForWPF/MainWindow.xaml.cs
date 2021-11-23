@@ -47,15 +47,22 @@ namespace OganesyantsCoderForWPF
 
         private void ResultButton_Click(object sender, RoutedEventArgs e)
         {
+            if (SourseBox.Text!="")
+            {
 
-            try
-            {
-                ResultBox.Text = Scrambler(SourseBox.Text, KeyBox.Text);
+                try
+                {
+                     ResultBox.Text = Scrambler(SourseBox.Text, KeyBox.Text);
+                }
+                catch
+                {
+                     KeyBox.Text = Convert.ToString(GeneratorRandomValue());
+                     ResultBox.Text = Scrambler(SourseBox.Text, KeyBox.Text);
+                }
             }
-            catch
+            else
             {
-                KeyBox.Text = Convert.ToString(GeneratorRandomValue());
-                ResultBox.Text = Scrambler(SourseBox.Text, KeyBox.Text);
+                MessageBox.Show("Вы не ввели текст в поле \"Ваш текст\".", "Сообщение");
             }
         }
         private void KeyCreateButton_Click_1(object sender, RoutedEventArgs e)
@@ -81,7 +88,7 @@ namespace OganesyantsCoderForWPF
         private void ResultSaveButton_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Результат работы шифратора (*.txt)|*.txt";
+            saveFileDialog1.Filter = "Результат работы (*.txt)|*.txt";
             if (saveFileDialog1.ShowDialog() == true)
             {
                 using (StreamWriter sw = new StreamWriter(saveFileDialog1.OpenFile(), System.Text.Encoding.UTF8))
@@ -96,7 +103,7 @@ namespace OganesyantsCoderForWPF
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            openFileDialog.Filter = "Текстик (*.txt)|*.txt";
+            openFileDialog.Filter = "Ваш файл (*.txt)|*.txt";
 
             if (openFileDialog.ShowDialog() == true)
             {
@@ -110,5 +117,10 @@ namespace OganesyantsCoderForWPF
                 return;
             }
             }
+
+        private void InstructionButton_Click(object sender, RoutedEventArgs e)
+        {
+            new InstructionWindow().Show();
+        }
     }
 }

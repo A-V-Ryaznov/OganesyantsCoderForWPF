@@ -1,0 +1,30 @@
+﻿<Window x:Class="OganesyantsCoderForWPF.InstructionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OganesyantsCoderForWPF"
+        mc:Ignorable="d"
+        Title="Oganesyants Coder. Инструкция" Height="320" Width="800" Icon="Resources/Icon.ico" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Инструкция по использованию" 
+               HorizontalAlignment="Left" 
+               Margin="10,10,0,0" 
+               VerticalAlignment="Top"
+               RenderTransformOrigin="-1.031,1.699"
+               FontSize="32"
+               FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" 
+                   Margin="10,68,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Данная программа предназначена для шифрации текста. Для начала работы необходимо поместить ваш текст для шифрации в поле &quot;Ваш текст&quot;. Потом вы должны написать или сгенирировать ваш ключ для дешифрации в поле  &quot;Ключ&quot; и нажать на кнопку &quot;Шифровать&quot;.&#10;&#10;Если вам необходимо дешифровать текст, то вы должны ввести в поле &quot;Ключ&quot; ваш ключ для дешифрации. Потом ввести ваш текст для дешифрации в поле &quot;Ваш текст&quot; и нажать на кнопку &quot;Шифровать&quot;."
+                   VerticalAlignment="Top"
+                   FontSize="20"
+                   TextAlignment="Justify"/>
+                
+                    
+
+
+
+    </Grid>
+</Window>

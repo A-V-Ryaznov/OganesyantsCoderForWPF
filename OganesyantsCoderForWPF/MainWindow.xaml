@@ -102,5 +102,11 @@
                 Margin="0,8,9.6,0" 
                 VerticalAlignment="Top"
                 Width="75" Click="ResultButton_Click"/>
+        <Button Content="Инструкция"
+                x:Name="InstructionButton"
+                HorizontalAlignment="Right" 
+                Margin="0,8,89.6,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="InstructionButton_Click"/>
     </Grid>
 </Window>
