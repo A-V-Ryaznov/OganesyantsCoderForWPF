@@ -1,0 +1,112 @@
+﻿<Window x:Class="OganesyantsCoderForWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OganesyantsCoderForWPF"
+        mc:Ignorable="d"
+        Title="Oganesyants Coder" Height="450" Width="800" Icon="Resources/Icon.ico" >
+
+
+
+    <Grid>
+        <!--Ключ-->
+        <TextBlock
+            x:Name="Key"
+            FontSize="15"
+            Margin="5,5,732.6,388" 
+            Text="Ключ:"/>
+        <TextBox
+            x:Name="KeyBox"
+            FontSize="15"
+            Margin="5,32,0,0"
+            Height="25"
+            Width="350"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"/>
+        <Button Content="Копировать"
+                x:Name="KeyCopyButton"
+                HorizontalAlignment="Left" 
+                Margin="280,8,0,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="KeyCopyButton_Click"/>
+        <Button Content="Создать"
+                x:Name="KeyCreateButton"
+                HorizontalAlignment="Left" 
+                Margin="200,8,0,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="KeyCreateButton_Click_1"/>
+        <!--Ресурс-->
+        <Button Content="Очистить"
+                x:Name="SourseClearButton"
+                HorizontalAlignment="Left" 
+                Margin="280,80,0,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="SourseClearButton_Click"/>
+        <Button Content="Открыть"
+                x:Name="SourseOpenButton"
+                HorizontalAlignment="Left" 
+                Margin="200,80,0,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="SourseOpenButton_Click"/>
+        <TextBlock
+            x:Name="Sourse"
+            FontSize="15"
+            Margin="5,80,710.6,311" 
+            Text="Ваш текст:"/>
+        <!--Ввод/вывод-->
+        <TextBox
+            x:Name="SourseBox"
+            Margin="5,109,0,11"
+            Height="270"
+            FontSize="15"
+            Width="350"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Auto"/>
+        <TextBox
+            x:Name="ResultBox"
+            Margin="0,109,5,11"
+            Height="270"
+            FontSize="15"
+            Width="350"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            IsReadOnly="True"
+            VerticalScrollBarVisibility="Auto"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"/>
+        <!--Результат-->
+        <Button Content="Сохранить"
+                x:Name="ResultSaveButton"
+                HorizontalAlignment="Right" 
+                Margin="0,80,9.6,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="ResultSaveButton_Click"/>
+        <Button Content="Копировать"
+                x:Name="ResultCopyButton"
+                HorizontalAlignment="Right" 
+                Margin="0,80,89.6,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="ResultCopyButton_Click"/>
+        <TextBlock
+            x:Name="Result"
+            FontSize="15"
+            Margin="439,80,276.6,311" 
+            Text="Результат:"/>
+        <Button Content="Шифровать"
+                x:Name="ResultButton"
+                HorizontalAlignment="Right" 
+                Margin="0,8,9.6,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="ResultButton_Click"/>
+        <Button Content="Инструкция"
+                x:Name="InstructionButton"
+                HorizontalAlignment="Right" 
+                Margin="0,8,89.6,0" 
+                VerticalAlignment="Top"
+                Width="75" Click="InstructionButton_Click"/>
+    </Grid>
+</Window>
